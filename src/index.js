@@ -1,12 +1,8 @@
-const {Router} =require ('express');
+require('./env')
 
-const indexCtrl = require('./ctrl');
-const auth = require('./auth');
+const app = require('./app');
+const port = process.env.PORT || 4000;
 
-const router =Router();
-
-router.get('/', indexCtrl.indexPage);
-
-router.use('/auth', auth);
-
-module.exports = router;
+app.listen(port, () => {
+    console.log(`SimpleWebPage: Listening on port ${port}.`);
+});

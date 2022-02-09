@@ -1,11 +1,12 @@
 const {Router} = require('express');
 const router = Router();
 
-const indexCtrl = require('./ctrl');
-const auth = require('./router/auth');
+const ctrl = require('./ctrl');
+const auth = require('./auth');
 
-router.get('/', indexCtrl.indexPage);
-router.use('/auth', auth);
+router.get('/', ctrl.indexPage);
+
+//router.use('/auth', auth);
 
 
 module.exports = { 

@@ -5,21 +5,47 @@
     <meta charset="utf-8" />
     <title>HelloWorld!</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://developers.google.com/speed/libraries#jquery"></script>
   </head>
 
   <body>
-    <h1>
-        <b>
-            Welcome!
-        </b>
-    </h1>
+    <h1>HelloWorld!</h1>
 
     <div>
-        <nav>
-            <form action="/auth/sign_in" method="get">Log In</form>
-            <a>Sign Up</a>
-        </nav>
+      <nav>
+        <ul class="nav-item">
+          <li><a href="/auth/sign-up">Sign-up </a></li>
+          <li><a href="/auth/sign-in">Sign-in </a></li>
+        </ul>
+      </nav>
     </div>
+
+    <div>
+      <table id="test" class="table table-striped">
+        <thead>
+          <tr>
+            <td><b>id</b></td>
+            <td><b>닉네임</b></td>
+            <td><b>가입일자</b></td>
+            <td><b>접속중</b></td>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
+    <script>
+      const $tbody = document.getElementById('tbody');
+      const j = total;
+      for (var i = 0; i < j; i++) {
+        $tbody.innerHTML += `<tr>
+          <td>${obj[i].id}</td>
+          <td>${obj[i].username}</td>
+          <td>${obj[i].datejoined}</td>
+          <td>${obj[i].isActive}</td>
+        </tr>;`
+      }
+    </script>
 
   </body>
 

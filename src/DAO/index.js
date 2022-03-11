@@ -1,6 +1,6 @@
 const DAO = require('./ctrl');
 
-module.exports ={
+module.exports = {
     DAO
 }
 

@@ -1,6 +1,5 @@
 const DAO = require(`${__dirname}/../DAO`);
 
-
 const indexPage = async (req, res, next) => { 
     try { 
         const obj = await DAO.getUserList();
